@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazem Soliman | Staff QA Engineer - Interactive CV</title>
+    <title>Hazem Soliman | QA Engineer - Interactive CV</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -27,7 +27,8 @@
         .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
         .nav-active { border-left: 4px solid #0d9488; background: #1e293b; color: white !important; }
         .chart-container { position: relative; height: 300px; width: 100%; }
-        .timeline-dot { width: 12px; height: 12px; background: #0d9488; border-radius: 50%; position: absolute; left: -6px; top: 24px; }
+        /* Fixed Timeline Dots: Adjusted position and added proper spacing */
+        .timeline-dot { width: 14px; height: 14px; background: #0d9488; border-radius: 50%; position: absolute; left: -36px; top: 6px; border: 3px solid #f8fafc; box-shadow: 0 0 0 2px #0d9488; }
         .fade-in { animation: fadeIn 0.5s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         ::-webkit-scrollbar { width: 6px; }
@@ -39,13 +40,14 @@
     <!-- Sidebar Navigation -->
     <aside class="w-20 md:w-72 bg-primary text-slate-400 flex flex-col h-full shadow-2xl z-30 flex-shrink-0 transition-all duration-300">
         <div class="p-6 border-b border-slate-800">
-            <!-- Removed the 'transform rotate-3' class to make the box perfectly straight -->
+            <!-- Box is now perfectly straight as requested -->
             <div class="w-12 h-12 md:w-20 md:h-20 bg-gradient-to-br from-accent to-teal-500 text-white rounded-2xl flex items-center justify-center text-2xl md:text-4xl font-extrabold mx-auto md:mx-0 shadow-lg">
                 HS
             </div>
             <div class="mt-4 hidden md:block">
                 <h1 class="text-white text-xl font-bold tracking-tight">Hazem Soliman</h1>
-                <p class="text-accent text-xs font-bold uppercase tracking-widest mt-1">Staff QA Engineer</p>
+                <!-- Updated Title to QA Engineer -->
+                <p class="text-accent text-xs font-bold uppercase tracking-widest mt-1">QA Engineer</p>
             </div>
         </div>
 
@@ -108,7 +110,7 @@
                     </div>
                     <h3 class="text-accent font-bold uppercase tracking-widest text-xs mb-2">Professional Summary</h3>
                     <p class="text-xl text-slate-700 leading-relaxed max-w-3xl">
-                        ISTQB-certified <span class="text-primary font-bold">Staff Quality Control Engineer</span> with 15+ years of success in architecting QA ecosystems. Expert in leading teams for high-stakes Saudi governmental projects, specializing in <span class="text-primary font-bold">Playwright (JS)</span>, <span class="text-primary font-bold">Robot Framework (Python)</span>, and the cutting-edge integration of <span class="text-accent font-bold">GenAI Agents</span> for autonomous testing.
+                        ISTQB-certified <span class="text-primary font-bold">QA Engineer</span> with 15+ years of success in architecting QA ecosystems. Expert in leading teams for high-stakes Saudi governmental projects, specializing in <span class="text-primary font-bold">Playwright (JS)</span>, <span class="text-primary font-bold">Robot Framework (Python)</span>, and the cutting-edge integration of <span class="text-accent font-bold">GenAI Agents</span> for autonomous testing.
                     </p>
                     
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
@@ -144,7 +146,7 @@
                             </li>
                             <li class="flex items-start p-3">
                                 <span class="text-accent mr-2">✦</span>
-                                <span>Staff Leadership for <strong>MOE Oil & Gas</strong> & <strong>Riyadh Transport</strong>.</span>
+                                <span>Leading QA for <strong>MOE Oil & Gas</strong> & <strong>Riyadh Transport</strong>.</span>
                             </li>
                         </ul>
                     </div>
@@ -165,7 +167,7 @@
 
             <!-- VIEW: EXPERIENCE -->
             <section id="view-experience" class="view-content fade-in hidden space-y-6">
-                <div class="relative border-l-2 border-slate-200 ml-4 pl-8 space-y-12 pb-10">
+                <div class="relative border-l-2 border-slate-200 ml-8 pl-10 space-y-12 pb-10">
                     <!-- Job 1 -->
                     <div class="relative">
                         <div class="timeline-dot"></div>
