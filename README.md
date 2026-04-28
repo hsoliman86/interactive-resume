@@ -38,7 +38,3 @@ LinkedIn: Hazem Soliman Profile
 Email: hazemyousef5@gmail.com
 
 Phone: 🇸🇦 +966547311096 (KSA) | 🇪🇬 +20103236970 (EG)
-
-Developed with focus on quality and user experience.
-
-انتهى النص. بمجرد لصق هذا في GitHub، ستجد الصفحة أصبحت منسقة واحترافية جداً. بالتوفيق يا بطل!
