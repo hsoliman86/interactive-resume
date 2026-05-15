@@ -104,7 +104,23 @@
 
         <div class="p-8 max-w-6xl mx-auto">
             
-            <!-- VIEW: CONTACT -->
+            <!-- VIEW SECTIONS -->
+            <section id="view-overview" class="view-content fade-in space-y-8">
+                <h2>Overview Content</h2>
+            </section>
+
+            <section id="view-experience" class="view-content fade-in hidden space-y-8">
+                <h2>Experience Content</h2>
+            </section>
+
+            <section id="view-tech" class="view-content fade-in hidden space-y-8">
+                <h2>Tech Content</h2>
+            </section>
+
+            <section id="view-certifications" class="view-content fade-in hidden space-y-8">
+                <h2>Certifications Content</h2>
+            </section>
+
             <section id="view-contact" class="view-content fade-in hidden space-y-8">
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
                     <h3 class="text-primary font-bold uppercase tracking-wider text-lg mb-4">Contact Me</h3>
@@ -135,7 +151,9 @@
         function navigate(viewId) {
             document.querySelectorAll('.view-content').forEach(v => v.classList.add('hidden'));
             document.querySelectorAll('nav button').forEach(b => b.classList.remove('nav-active'));
-            document.getElementById(`view-${viewId}`).classList.remove('hidden');
+            const activeView = document.getElementById(`view-${viewId}`);
+            activeView.classList.remove('hidden');
+            activeView.scrollIntoView();
             document.getElementById(`nav-${viewId}`).classList.add('nav-active');
 
             const titles = {
