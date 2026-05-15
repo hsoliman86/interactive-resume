@@ -47,16 +47,6 @@
 </head>
 <body class="bg-background text-secondary h-screen flex overflow-hidden">
 
-    <!-- Chosen Palette: Slate and Teal (Primary: #0f172a, Accent: #0d9488, Background: #f8fafc) for a professional, calm, and trustworthy technical feel. -->
-    <!-- Application Structure Plan: A Dashboard layout with a persistent sidebar for navigation and a main content area. This structure allows recruiters/hiring managers to instantly access specific areas of interest (Profile, Experience, Skills, Education) without linear scrolling, maximizing consumability of a 15+ year career history. -->
-    <!-- Visualization & Content Choices: 
-         - Profile: Quick stats/metrics (Goal: Inform) -> HTML Grid with big numbers -> Quick impact.
-         - Skills: Radar Chart (Goal: Compare) -> Chart.js -> Visually demonstrates the balance between Automation, Leadership, and Manual testing.
-         - Experience: Interactive Timeline/Accordion (Goal: Organize/Change) -> Vanilla JS + HTML -> Keeps the UI clean while allowing drill-down into specific roles and achievements.
-         - ALL visual elements use Canvas or structured HTML.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
     <aside class="w-20 md:w-64 bg-primary text-slate-300 flex flex-col h-full shadow-xl z-20 flex-shrink-0 transition-all duration-300">
         <div class="p-4 md:p-6 border-b border-slate-700 text-center md:text-left">
             <div class="w-12 h-12 md:w-20 md:h-20 bg-accent text-white rounded-full flex items-center justify-center text-xl md:text-3xl font-bold mx-auto md:mx-0 mb-3 shadow-lg">
@@ -92,14 +82,21 @@
                         <span class="hidden md:inline font-medium">Certifications</span>
                     </button>
                 </li>
+                <!-- New Navigation Item for Contact -->
+                <li>
+                    <button onclick="navigate('contact')" id="nav-contact" class="w-full flex items-center p-3 md:px-6 hover:bg-slate-800 transition-colors">
+                        <span class="text-xl md:mr-3">&#128222;</span>
+                        <span class="hidden md:inline font-medium">Contact Me</span>
+                    </button>
+                </li>
             </ul>
         </nav>
         
-        <div class="p-4 border-t border-slate-700 hidden md:block">
-            <div class="text-xs text-slate-400 space-y-2">
-                <p>&#128205; Riyadh, KSA</p>
-                <p>&#128231; hazemyousef5@gmail.com</p>
-                <p>&#128222; +966547311096</p>
+        <div class="p-4 border-t border-slate-700 hidden md:block bg-slate-900/50">
+            <div class="text-[10px] uppercase tracking-widest text-accent font-bold mb-3">Quick Contact</div>
+            <div class="text-xs text-slate-400 space-y-3">
+                <p class="flex items-center"><span class="mr-2 text-sm">&#128231;</span> hazemyousef5@gmail.com</p>
+                <p class="flex items-center"><span class="mr-2 text-sm">&#127480;&#127462;</span> +966547311096</p>
             </div>
         </div>
     </aside>
@@ -115,6 +112,7 @@
             </a>
         </header>
 
+        <!-- Profile Section -->
         <section id="section-profile" class="fade-in block space-y-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                 <h3 class="text-lg font-bold text-primary mb-3 flex items-center"><span class="text-accent mr-2">&#128220;</span> About This Section</h3>
@@ -154,6 +152,7 @@
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="section-experience" class="fade-in hidden space-y-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                 <h3 class="text-lg font-bold text-primary mb-3 flex items-center"><span class="text-accent mr-2">&#128220;</span> About This Section</h3>
@@ -174,6 +173,7 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="section-skills" class="fade-in hidden space-y-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                 <h3 class="text-lg font-bold text-primary mb-3 flex items-center"><span class="text-accent mr-2">&#128220;</span> About This Section</h3>
@@ -195,6 +195,7 @@
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                     <h3 class="text-lg font-bold text-primary mb-4">Technical Stack</h3>
                     <div class="space-y-4">
+                        <!-- Proficiency Bars... -->
                         <div>
                             <div class="flex justify-between mb-1 text-sm font-medium"><span class="text-primary">Test Automation</span><span class="text-accent">Playwright, Robot Framework, Selenium</span></div>
                             <div class="w-full bg-slate-200 rounded-full h-2">
@@ -229,7 +230,9 @@
             </div>
         </section>
 
+        <!-- Education Section -->
         <section id="section-education" class="fade-in hidden space-y-6">
+            <!-- Education Content... -->
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                 <h3 class="text-lg font-bold text-primary mb-3 flex items-center"><span class="text-accent mr-2">&#128220;</span> About This Section</h3>
                 <p class="text-sm leading-relaxed text-slate-600">
@@ -254,37 +257,96 @@
                     <div class="text-3xl mb-4">&#127942;</div>
                     <h3 class="text-xl font-bold text-primary mb-4">Certifications & Training</h3>
                     <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2">&#10004;</span>
-                            <div>
-                                <span class="font-bold text-slate-800 block">ISTQB Certified Tester</span>
-                                <span class="text-xs text-slate-500">Foundation Level</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2">&#10004;</span>
-                            <div>
-                                <span class="font-bold text-slate-800 block">SCRUM MASTER</span>
-                                <span class="text-xs text-slate-500">Accredited</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2">&#10004;</span>
-                            <div>
-                                <span class="font-bold text-slate-800 block">MCSA/MCSE</span>
-                                <span class="text-xs text-slate-500">SharePoint</span>
-                            </div>
-                        </li>
+                        <li class="flex items-start"><span class="text-accent mr-2">&#10004;</span><div><span class="font-bold text-slate-800 block">ISTQB Certified Tester</span><span class="text-xs text-slate-500">Foundation Level</span></div></li>
+                        <li class="flex items-start"><span class="text-accent mr-2">&#10004;</span><div><span class="font-bold text-slate-800 block">SCRUM MASTER</span><span class="text-xs text-slate-500">Accredited</span></div></li>
+                        <li class="flex items-start"><span class="text-accent mr-2">&#10004;</span><div><span class="font-bold text-slate-800 block">MCSA/MCSE</span><span class="text-xs text-slate-500">SharePoint</span></div></li>
                         <li class="flex items-start mt-4 pt-4 border-t border-slate-100">
                             <span class="text-primary mr-2">&#128187;</span>
                             <div>
                                 <span class="font-bold text-slate-800 block">Test Automation University</span>
                                 <span class="text-xs text-slate-500 block">Playwright with JavaScript</span>
                                 <span class="text-xs text-slate-500 block">API Test Automation with Postman</span>
-                                <span class="text-xs text-slate-500 block">Continuous Testing with Azure DevOps</span>
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Contact Section -->
+        <section id="section-contact" class="fade-in hidden space-y-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <h3 class="text-lg font-bold text-primary mb-3 flex items-center"><span class="text-accent mr-2">&#128220;</span> About This Section</h3>
+                <p class="text-sm leading-relaxed text-slate-600">
+                    Let's connect! Whether you're interested in discussing QA strategies, automation frameworks, or potential collaborations, feel free to reach out through any of the channels below.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Email & Phone Card -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-primary mb-6 flex items-center">
+                        <span class="mr-2">&#128222;</span> Direct Communication
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-accent transition-colors group">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mr-4 text-2xl group-hover:scale-110 transition-transform">
+                                &#128231;
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Address</p>
+                                <a href="mailto:hazemyousef5@gmail.com" class="text-primary font-bold hover:text-accent transition-colors">hazemyousef5@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-accent transition-colors group">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mr-4 text-2xl group-hover:scale-110 transition-transform">
+                                &#127480;&#127462;
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">KSA Contact (Current)</p>
+                                <a href="tel:+966547311096" class="text-primary font-bold hover:text-accent transition-colors">00966547311096</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100 hover:border-accent transition-colors group">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mr-4 text-2xl group-hover:scale-110 transition-transform">
+                                &#127466;&#127468;
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Egypt Contact</p>
+                                <a href="tel:+201032396970" class="text-primary font-bold hover:text-accent transition-colors">00201032396970</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Profiles Card -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-primary mb-6 flex items-center">
+                        <span class="mr-2">&#127760;</span> Professional Networks
+                    </h3>
+                    <div class="space-y-6">
+                        <a href="https://www.linkedin.com/in/hazemsoliman86/" target="_blank" class="flex items-center p-4 bg-[#0077b5]/5 rounded-lg border border-[#0077b5]/20 hover:bg-[#0077b5]/10 transition-all group">
+                            <div class="w-12 h-12 bg-[#0077b5] text-white rounded-full flex items-center justify-center shadow-sm mr-4 text-xl group-hover:scale-110 transition-transform font-bold">
+                                in
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-[#0077b5] uppercase tracking-wider">LinkedIn</p>
+                                <p class="text-primary font-bold">Hazem Soliman Profile</p>
+                                <p class="text-xs text-slate-500">Connect for professional inquiries</p>
+                            </div>
+                        </a>
+                        
+                        <div class="p-6 bg-accent/5 border border-accent/20 rounded-xl mt-4">
+                            <h4 class="text-accent font-bold mb-2 flex items-center">
+                                <span class="mr-2">&#128205;</span> Current Location
+                            </h4>
+                            <p class="text-sm text-slate-700 leading-relaxed">
+                                Currently based in <strong class="text-primary">Riyadh, Saudi Arabia</strong>. Open to local and international strategic opportunities in Quality Engineering and QA Leadership.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -301,7 +363,8 @@
             profile: { title: "Executive Summary", subtitle: "Overview of professional background and key metrics." },
             experience: { title: "Experience Journey", subtitle: "Chronological professional roles and achievements." },
             skills: { title: "Technical Radar", subtitle: "Analysis of QA methodologies, tools, and technical proficiency." },
-            education: { title: "Education & Certifications", subtitle: "Academic background and professional credentials." }
+            education: { title: "Education & Certifications", subtitle: "Academic background and professional credentials." },
+            contact: { title: "Connect With Me", subtitle: "Direct channels for professional inquiries and collaboration." }
         };
 
         const competencies = [
@@ -386,7 +449,6 @@
         function init() {
             populateCompetencies();
             populateJobsList();
-            
             document.querySelector('.job-item').click();
         }
 
@@ -420,12 +482,10 @@
                 el.classList.remove('bg-slate-100', 'border-l-accent');
                 el.classList.add('border-l-transparent');
             });
-            
             element.classList.add('bg-slate-100', 'border-l-accent');
             element.classList.remove('border-l-transparent');
 
             const detailsContainer = document.getElementById('job-details');
-            
             let highlightsHtml = job.highlights.map(h => `<li class="flex items-start"><span class="text-accent mr-2 mt-1">&#10148;</span><span class="text-slate-700 leading-relaxed">${h}</span></li>`).join('');
 
             detailsContainer.innerHTML = `
@@ -438,9 +498,7 @@
                         <span class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">${job.period}</span>
                     </div>
                     <h4 class="font-bold text-primary mb-3 text-sm uppercase tracking-wide">Key Achievements & Responsibilities</h4>
-                    <ul class="space-y-3">
-                        ${highlightsHtml}
-                    </ul>
+                    <ul class="space-y-3">${highlightsHtml}</ul>
                 </div>
             `;
         }
@@ -461,10 +519,7 @@
             document.getElementById('page-subtitle').innerText = pages[viewId].subtitle;
 
             state.currentView = viewId;
-
-            if (viewId === 'skills' && !state.skillsChartRendered) {
-                renderSkillsChart();
-            }
+            if (viewId === 'skills' && !state.skillsChartRendered) { renderSkillsChart(); }
         };
 
         function renderSkillsChart() {
@@ -492,15 +547,8 @@
                         r: {
                             angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
                             grid: { color: 'rgba(0, 0, 0, 0.1)' },
-                            pointLabels: {
-                                font: { size: 12, family: "'Segoe UI', sans-serif", weight: 'bold' },
-                                color: '#334155'
-                            },
-                            ticks: {
-                                display: false,
-                                min: 0,
-                                max: 100
-                            }
+                            pointLabels: { font: { size: 12, family: "'Segoe UI', sans-serif", weight: 'bold' }, color: '#334155' },
+                            ticks: { display: false, min: 0, max: 100 }
                         }
                     },
                     plugins: {
@@ -508,13 +556,7 @@
                         tooltip: {
                             backgroundColor: 'rgba(15, 23, 42, 0.9)',
                             padding: 12,
-                            titleFont: { size: 14 },
-                            bodyFont: { size: 14 },
-                            callbacks: {
-                                label: function(context) {
-                                    return ` Proficiency: ${context.raw}%`;
-                                }
-                            }
+                            callbacks: { label: (context) => ` Proficiency: ${context.raw}%` }
                         }
                     }
                 }
